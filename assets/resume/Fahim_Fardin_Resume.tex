@@ -1,8 +1,7 @@
+
 %-------------------------
 % Resume in LaTeX - Fahim Fardin
-% ATS-friendly revision: no icon glyphs, plain-text labels, skills grouped by
-% proficiency, real hyperlinks on projects/certifications.
-%------------------------
+%-------------------------
 
 \documentclass[letterpaper,11pt]{article}
 
@@ -14,7 +13,6 @@
 \usepackage[pdftex]{hyperref}
 \usepackage{fancyhdr}
 
-% Clean sans-serif font
 \renewcommand{\familydefault}{\sfdefault}
 
 \hypersetup{
@@ -29,7 +27,6 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Margins
 \addtolength{\oddsidemargin}{-0.45in}
 \addtolength{\evensidemargin}{-0.45in}
 \addtolength{\textwidth}{1.1in}
@@ -41,24 +38,22 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Section formatting - bold + rule, no special symbols
 \titleformat{\section}{
   \vspace{4pt}\bfseries\large
 }{}{0em}{}[\titlerule \vspace{-6pt}]
 
-% Custom command for certification / plain text links
 \newcommand{\certlink}[2]{\href{#2}{#1}}
 
 %-------------------------------------------
-%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \begin{document}
 
-%---------- HEADER (plain text, no icon glyphs) -----------------
+%---------- HEADER -----------------
 \begin{center}
 {\Huge \textbf{Fahim Fardin}} \\[10pt]
 
-Dhaka, Bangladesh
+95/3/2 Mirpur, Dhaka, Bangladesh
+\,\,|\,\,
+Phone: 01726490209
 \,\,|\,\,
 Email: \href{mailto:fahimfardin1045@gmail.com}{fahimfardin1045@gmail.com} \\[6pt]
 
@@ -68,7 +63,6 @@ GitHub: \href{https://github.com/fahim-fardin-1045}{fahim-fardin-1045}
 \,\,|\,\,
 Portfolio: \href{https://sites.google.com/diu.edu.bd/fahimfardin1045/education}{Fahim Fardin Portfolio}
 \end{center}
-
 
 %----------- SUMMARY -----------------
 \section{Professional Summary}
@@ -93,15 +87,22 @@ SSC in Science \,\,|\,\, GPA: 4.89
 
 \end{itemize}
 
-%----------- TECHNICAL SKILLS (grouped by proficiency) -----------------
+%----------- TECHNICAL SKILLS -----------------
 \section{Technical Skills}
 \begin{itemize}[leftmargin=*]
+
 \item \textbf{Proficient:} MS Excel, Data Entry, Data Annotation, Documentation, Python, SQL, Machine Learning, Data Analysis, Data Visualization, Git/GitHub, Jupyter Notebook
+
 \item \textbf{Intermediate:} Java, Bootstrap, Scikit-learn, NumPy, Pandas, Matplotlib, Seaborn, VS Code
-\item \textbf{Familiar:} CSS, PHP, Django, Spring Boot, TensorFlow
+
+\item \textbf{Familiar:} HTML5, CSS, JavaScript, PHP, Django, Flask, Flask-SQLAlchemy, Flask-Login, Flask-WTF, Jinja2, PyMySQL, Spring Boot, Spring MVC, Spring Security, Thymeleaf, Spring Data JPA/Hibernate, MySQL, Maven, TensorFlow
+
 \item \textbf{Also:} Statistics
+
 \item \textbf{Core Competencies:} Record Keeping, Quality Assurance, Field Coordination, Communication Skills
+
 \end{itemize}
+
 %----------- EXPERIENCE -----------------
 \section{Professional Experience}
 \begin{itemize}[leftmargin=*]
@@ -112,16 +113,24 @@ SSC in Science \,\,|\,\, GPA: 4.89
 Deliver precise, high-quality data annotation services for AI and machine learning projects, with a focus on \textbf{Image Research}. Maintain accuracy, reliability, and attention to detail across large-scale labeling workflows.
 
 \end{itemize}
+
 %----------- PROJECTS -----------------
 \section{Projects}
 \begin{itemize}[leftmargin=*]
 
-% Java Doctor Scheduler
+% CityCare Hospital Management System
 \item
-\textbf{Doctor Appointment Scheduler}
-\hfill \href{https://github.com/fahim-fardin-1045/OOD_Spring_Project}{GitHub} \\
-\textit{Java, Spring Boot, MySQL, Thymeleaf} \\
-Built a clinic appointment scheduling platform supporting real-time availability, slot booking, and patient registration. Implemented MVC workflows, MySQL persistence, and a SOLID-based modular architecture.
+\textbf{CityCare Hospital Management System}
+\hfill \href{https://github.com/fahim-fardin-1045/city-care-hospital-management-system}{GitHub} \\
+\textit{Java 21, Spring Boot, Thymeleaf, Spring Security, Spring Data JPA/Hibernate, MySQL, HTML/CSS/JavaScript, Bootstrap, Maven} \\
+Developed a full-stack hospital management prototype with a responsive public website, doctor and department directories, patient registration/login, appointment booking, and appointment-history tracking. Built a Spring Security-protected admin dashboard to manage doctors, departments, appointment statuses, wards, rooms, and bed capacity. Added doctor/department image uploads with browser-based cropping and MySQL persistence; patient passwords are BCrypt-hashed.
+
+% The Royal Spice
+\item
+\textbf{The Royal Spice -- Restaurant Ordering \& Management System}
+\hfill \href{https://github.com/fahim-fardin-1045/The-Royel-Spice}{GitHub} \\
+\textit{Python, Flask, Flask-SQLAlchemy, MySQL, Jinja2, Flask-Login, Flask-WTF, HTML/CSS/JavaScript, PyMySQL} \\
+Developed a responsive restaurant ordering and management MVP with searchable menus, cart, checkout, receipts, reservation requests, and discount codes. Built an admin dashboard and POS for order/payment status, menu and table management, customer records, inventory, and sales/expense reporting. Implemented server-side price/discount validation and reservation-capacity checks.
 
 % Django E-commerce
 \item
@@ -167,7 +176,7 @@ Created a CLI-based booking system featuring movie listings, showtimes, seat sel
 
 \item \certlink{Foundations of User Experience (UX) Design -- Google}{https://coursera.org/verify/U7A5CRUI7LOB}
 
-\item Professional UI/UX Design with Figma (Online) -- UY LAB
+\item \certlink{Professional UI/UX Design with Figma (Online) -- UY LAB}{https://example.com/certificate-link}
 
 \item \certlink{Start the UX Design Process -- Google}{https://coursera.org/verify/YOY3MT6ZIQ01}
 
@@ -190,5 +199,24 @@ Created a CLI-based booking system featuring movie listings, showtimes, seat sel
 \item \textbf{Interests:} Studying Abroad, Traveling, Sci-Fi Books, Movies
 \end{itemize}
 
-%-------------------------------------------
+%----------- REFERENCES -----------------
+\section{References}
+\begin{itemize}[leftmargin=*]
+
+\item
+\textbf{Dr. Imran Mahmud} \\
+Head, Department of Software Engineering \\
+Daffodil International University \\
+Email: \href{mailto:imranmahmud@daffodilvarsity.edu.bd}{imranmahmud@daffodilvarsity.edu.bd} \\
+Phone: +8801847140117, +8801711370502
+
+\item
+\textbf{Md. Shohel Arman} \\
+Assistant Professor, Software Engineering \\
+Daffodil International University \\
+Email: \href{mailto:arman.swe@diu.edu.bd}{arman.swe@diu.edu.bd} \\
+Phone: +8801673383289
+
+\end{itemize}
+
 \end{document}

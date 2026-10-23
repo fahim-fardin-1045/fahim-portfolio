@@ -199,8 +199,6 @@
       ['citycare', 'CityCare Hospital', 'Healthcare project'],
       ['zenblog', 'ZenBlog', 'Blog and CMS'],
       ['hotel', 'Hotel Booking System', 'Hotel reservation project'],
-      ['doctor', 'Doctor Appointment Scheduler', 'Appointment project'],
-      ['shop', 'Online Super Shop', 'E-commerce project'],
       ['cinema', 'Movie Ticket Booking System', 'C programming project']
     ];
     const editorOn = new URLSearchParams(location.search).get('edit') === '1';

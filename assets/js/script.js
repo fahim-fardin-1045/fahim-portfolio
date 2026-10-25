@@ -199,7 +199,7 @@
       ['citycare', 'CityCare Hospital', 'Healthcare project'],
       ['zenblog', 'ZenBlog', 'Blog and CMS'],
       ['hotel', 'Hotel Booking System', 'Hotel reservation project'],
-      ['cinema', 'Movie Ticket Booking System', 'C programming project']
+      ['freshbasket', 'FreshBasket Fruits', 'Django fruit shop and operations']
     ];
     const editorOn = new URLSearchParams(location.search).get('edit') === '1';
     const modal = document.getElementById('imageStudio');
@@ -208,6 +208,10 @@
     const input = document.getElementById('studioFileInput');
     const launch = document.getElementById('imageStudioOpen');
     const outputs = new Map([...document.querySelectorAll('[data-photo-target]')].map(el => [el.dataset.photoTarget, el]));
+    // Built-in project screenshots are the permanent fallback if no custom
+    // upload exists. Never clear an existing preview just because the image
+    // editor's publishing manifest has no override for this project.
+    const builtInImages = new Map([...outputs].map(([key, element]) => [key, element.getAttribute('src') || '']));
     const published = {};
     const changes = new Map();
     const objectURLs = new Map();
@@ -249,11 +253,12 @@
     function getURL(key) {
       if (changes.has(key)) {
         const record = changes.get(key);
-        if (record.removed) return '';
+        // Removing an uploaded picture restores the built-in preview.
+        if (record.removed) return builtInImages.get(key) || '';
         if (!objectURLs.has(key)) objectURLs.set(key, URL.createObjectURL(record.blob));
         return objectURLs.get(key);
       }
-      return published[key] || '';
+      return published[key] || builtInImages.get(key) || '';
     }
     function redraw() {
       entries.forEach(([key]) => {

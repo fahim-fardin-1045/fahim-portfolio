@@ -113,43 +113,158 @@
       <div class="skills-area reveal"><div class="skills-title"><h3>My toolkit</h3><p>Technologies & tools I work with</p></div><div class="skill-groups"><div class="skill-group"><h4><span class="group-dot"></span> Core strengths</h4><div class="skill-tags"><span>Python</span><span>SQL</span><span>Data Analysis</span><span>Machine Learning</span><span>Data Visualization</span><span>MS Excel</span><span>Git & GitHub</span><span>Jupyter</span></div></div><div class="skill-group"><h4><span class="group-dot second"></span> Working knowledge</h4><div class="skill-tags"><span>Java</span><span>Scikit-learn</span><span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>Seaborn</span><span>Bootstrap</span></div></div><div class="skill-group"><h4><span class="group-dot third"></span> Exploring & applying</h4><div class="skill-tags"><span>Django</span><span>Spring Boot</span><span>PHP</span><span>TensorFlow</span><span>CSS</span><span>Statistics</span></div></div></div></div>
     </section>
 
-    <section class="section projects-section section-anchor" id="projects" aria-labelledby="projects-title"><div class="section-head reveal"><div><div class="section-label"><span>02 /</span> SELECTED WORK</div><h2 id="projects-title">Ideas turned<br><span>into projects.</span></h2></div><p class="section-intro">A collection of restaurant, healthcare, content, booking, and programming projects. Filter by category or technology.</p></div>
-      <div class="filter-row reveal" role="group" aria-label="Filter projects by category or technology"><button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">All projects <span>05</span></button><button class="filter-btn" type="button" data-filter="web" aria-pressed="false">Web apps</button><button class="filter-btn" type="button" data-filter="python" aria-pressed="false">Python</button><button class="filter-btn" type="button" data-filter="java" aria-pressed="false">Java</button><button class="filter-btn" type="button" data-filter="php" aria-pressed="false">PHP</button><button class="filter-btn" type="button" data-filter="c" aria-pressed="false">C</button></div>
+    <section class="section projects-section section-anchor" id="projects" aria-labelledby="projects-title">
+      <div class="section-head reveal">
+        <div><div class="section-label"><span>02 /</span> SELECTED WORK</div><h2 id="projects-title">Built to solve.<br><span>Built to learn.</span></h2></div>
+        <p class="section-intro">Five project case studies about the users, the problem, the decisions I made, and the lessons that shaped how I build software.</p>
+      </div>
+      <div class="work-introduction reveal"><span class="work-intro-mark">THE PROCESS BEHIND THE PRODUCT</span><p>I learn best by following a problem all the way through: understanding who needs the software, mapping the workflow, choosing practical tools, and reflecting on what I would improve next. Each project below shares that process—not just a list of features.</p></div>
+      <div class="filter-row reveal" role="group" aria-label="Filter work by technology">
+        <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All projects <span>05</span></button>
+        <button type="button" class="filter-btn" data-filter="web" aria-pressed="false">Web apps</button>
+        <button type="button" class="filter-btn" data-filter="python" aria-pressed="false">Python</button>
+        <button type="button" class="filter-btn" data-filter="java" aria-pressed="false">Java</button>
+        <button type="button" class="filter-btn" data-filter="php" aria-pressed="false">PHP</button>
+      </div>
       <div class="projects-grid" id="projectsGrid">
-        <article class="project-card reveal" data-tech="web python">
-          <div class="project-art art-royal">
-            <div class="art-top"><span class="art-brand royal-brand"><span class="royal-icon">✳</span> THE ROYAL SPICE</span><span class="art-minilabel">RESTAURANT PLATFORM</span></div>
-            <div class="royal-ui" aria-hidden="true">
-              <div class="royal-copy"><span class="royal-overline">FRESHLY PREPARED • EVERY DAY</span><strong>A little spice.<br><em>A lot of soul.</em></strong><span class="royal-cta">Explore our menu <b>↗</b></span></div>
-              <div class="royal-plate"><div class="royal-rim"><span class="royal-food food-a"></span><span class="royal-food food-b"></span><span class="royal-food food-c"></span><span class="royal-herb herb-a"></span><span class="royal-herb herb-b"></span></div></div>
-              <div class="royal-ticket"><span>ORDER #1045</span><strong>Today's specials</strong><i></i><i></i><i></i><b>FLASK · MYSQL</b></div>
+        <article class="project-card reveal work-project" data-tech="web python">
+          <a class="project-art work-art art-freshbasket" href="work/freshbasket.html" aria-label="Read the FreshBasket Fruits case study">
+            <div class="work-browser">
+              <div class="work-browser-bar" aria-hidden="true">
+                <span class="work-browser-dots"><i></i><i></i><i></i></span>
+                <span class="work-browser-name">FreshBasket / Storefront</span>
+                <span class="work-browser-arrow">↗</span>
+              </div>
+              <div class="work-browser-screen">
+                <img class="project-cover" src="assets/img/work/freshbasket-1.webp" data-photo-target="freshbasket" alt="Project interface preview for FreshBasket Fruits" loading="lazy" decoding="async">
+              </div>
             </div>
-          <img class="project-cover" data-photo-target="royal" alt="The Royal Spice project preview" loading="lazy" decoding="async" hidden></div>
-          <div class="project-body"><div class="project-number">PROJECT / 01 <span>RESTAURANT & POS</span></div><h3>The Royal Spice</h3><p>A restaurant ordering and management MVP with searchable menus, online cart and checkout, reservation requests, and an admin/POS dashboard.</p><div class="project-footer"><div class="tech-list"><span>Python</span><span>Flask</span><span>MySQL</span></div><a class="project-link" href="https://github.com/fahim-fardin-1045/The-Royel-Spice" target="_blank" rel="noopener noreferrer" aria-label="View The Royal Spice project on GitHub" title="View project code"><svg class="icon"><use href="#ic-arrow-up-right"/></svg></a></div></div>
-        </article>
-        <article class="project-card reveal" data-tech="web java">
-          <div class="project-art art-citycare">
-            <div class="art-top"><span class="art-brand citycare-brand"><span class="citycare-cross">+</span> City<span>Care</span></span><span class="art-minilabel">HOSPITAL PROJECT</span></div>
-            <div class="citycare-ui" aria-hidden="true">
-              <div class="citycare-sidebar"><span class="citycare-logo">+</span><i class="citycare-active"></i><i></i><i></i><i></i></div>
-              <div class="citycare-workspace"><span class="citycare-label">HOSPITAL OVERVIEW</span><strong>Welcome back, team.</strong><div class="citycare-widgets"><div><span>PATIENTS</span><b>240</b><i></i></div><div><span>APPOINTMENTS</span><b>18</b><i></i></div></div><div class="citycare-linehead"><b>Today's schedule</b><span>VIEW ALL →</span></div><div class="citycare-patient"><span class="citycare-dot"></span><i></i><em>09:30</em></div><div class="citycare-patient"><span class="citycare-dot"></span><i></i><em>11:00</em></div></div>
-              <div class="citycare-pulse"><svg viewBox="0 0 85 22" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 11h18l5-8 8 16 7-11 4 3h40"/></svg></div>
+            <span class="work-art-label">REAL UI · DEMO DATA</span>
+          </a>
+          <div class="project-body">
+            <div class="project-number">PROJECT / 01 <span>FRUIT E-COMMERCE &AMP; OPERATIONS</span></div>
+            <h3>FreshBasket Fruits</h3>
+            <p class="work-project-summary">A fruit shop and staff operations system that connects checkout, stock batches, promotions and fulfilment records.</p>
+
+            <div class="work-preview-strip" aria-label="Project screenshots">
+              <a href="work/freshbasket.html" aria-label="View freshbasket fruit product catalogue screen in the full case study"><img src="assets/img/work/freshbasket-2.webp" alt="FreshBasket fruit product catalogue screen" loading="lazy" decoding="async"></a>
+              <a href="work/freshbasket.html" aria-label="View freshbasket staff operations dashboard in the full case study"><img src="assets/img/work/freshbasket-3.webp" alt="FreshBasket staff operations dashboard" loading="lazy" decoding="async"></a>
             </div>
-          <picture class="citycare-preview" aria-hidden="true">
-            <source media="(prefers-reduced-motion: reduce)" srcset="assets/img/citycare/preview-still.webp">
-            <img src="assets/img/citycare/preview-animated.gif" alt="" loading="lazy" decoding="async" width="980" height="613">
-          </picture>
-          <span class="citycare-preview-caption" aria-hidden="true">UI PREVIEW · SAMPLE DATA</span>
-          <img class="project-cover" data-photo-target="citycare" alt="CityCare Hospital project preview" loading="lazy" decoding="async" hidden></div>
-          <div class="project-body"><div class="project-number">PROJECT / 02 <span>FULL-STACK HEALTHCARE</span></div><h3>CityCare Hospital</h3><p>A Java Spring Boot hospital-management prototype with doctor listings, patient appointment tracking, and an admin dashboard. Preview screens use fictional sample data.</p><div class="project-footer"><div class="tech-list"><span>Java</span><span>Spring Boot</span><span>MySQL</span></div><a class="project-link" href="https://github.com/fahim-fardin-1045/city-care-hospital-management-system" target="_blank" rel="noopener noreferrer" aria-label="View CityCare Hospital project on GitHub" title="View project code"><svg class="icon"><use href="#ic-arrow-up-right"/></svg></a></div></div>
+            <div class="project-footer work-card-footer"><div class="tech-list"><span>Python</span><span>Django 5.2</span><span>MySQL</span></div><a class="project-link" href="https://github.com/fahim-fardin-1045/freshbasket" target="_blank" rel="noopener noreferrer" title="View source on GitHub" aria-label="View FreshBasket Fruits source code on GitHub"><svg class="icon"><use href="#ic-github"/></svg></a></div>
+            <a href="work/freshbasket.html" class="work-case-link">Read the full case study <svg class="icon"><use href="#ic-arrow-up-right"/></svg></a>
+          </div>
         </article>
-        <article class="project-card reveal" data-tech="web php"><div class="project-art art-blog"><div class="art-top"><span class="art-brand blog-brand">zen<span>blog.</span></span><span class="art-minilabel">CONTENT PLATFORM</span></div><div class="blog-ui"><div class="blog-cover"><span>THE CREATIVE JOURNAL</span><strong>Stories worth<br><em>sharing.</em></strong><span>Thoughts / Technology / Life</span></div><div class="blog-sidebar"><div class="blog-square"></div><span class="bar bar-long"></span><span class="bar bar-mid"></span><span class="bar bar-short"></span><div class="blog-line"></div><span class="bar bar-mid"></span><span class="bar bar-long"></span></div></div><img class="project-cover" data-photo-target="zenblog" alt="ZenBlog project preview" loading="lazy" decoding="async" hidden></div><div class="project-body"><div class="project-number">PROJECT / 03 <span>CMS</span></div><h3>ZenBlog</h3><p>A lightweight PHP blogging CMS with post creation, editing, category organisation, a responsive layout, and a simple administration panel.</p><div class="project-footer"><div class="tech-list"><span>PHP</span><span>MySQL</span><span>JavaScript</span></div><a class="project-link" href="https://github.com/fahim-fardin-1045/php_zen-blog" target="_blank" rel="noopener noreferrer" aria-label="View ZenBlog on GitHub"><svg class="icon"><use href="#ic-arrow-up-right"/></svg></a></div></div></article>
-        <article class="project-card reveal" data-tech="web php"><div class="project-art art-hotel"><div class="art-top"><span class="art-brand hotel-brand">HAVEN <span>·</span> STAYS</span><span class="art-minilabel">HOTEL SYSTEM</span></div><div class="hotel-ui"><div class="hotel-heading"><span>YOUR NEXT DESTINATION</span><strong>Stay somewhere<br>remarkable.</strong></div><div class="hotel-box"><span>CHECK IN <strong>18 OCT</strong></span><span>CHECK OUT <strong>21 OCT</strong></span><span>GUESTS <strong>02 ADULTS</strong></span><span class="hotel-search">→</span></div><div class="hotel-horizon"><i></i><i></i><i></i></div></div><img class="project-cover" data-photo-target="hotel" alt="Hotel Booking System project preview" loading="lazy" decoding="async" hidden></div><div class="project-body"><div class="project-number">PROJECT / 04 <span>BOOKING SYSTEM</span></div><h3>Hotel Booking System</h3><p>A PHP and MySQL hotel booking site with room details, date selection, booking confirmations, an admin panel, and demo payment flows.</p><div class="project-footer"><div class="tech-list"><span>PHP</span><span>MySQL</span><span>Bootstrap</span></div><a class="project-link" href="https://github.com/fahim-fardin-1045/hotel_booking" target="_blank" rel="noopener noreferrer" aria-label="View Hotel Booking System on GitHub"><svg class="icon"><use href="#ic-arrow-up-right"/></svg></a></div></div></article>
-        
-        
-        <article class="project-card reveal" data-tech="c"><div class="project-art art-cinema"><div class="art-top"><span class="art-brand cinema-brand">◈ CINEBOOK</span><span class="art-minilabel">CLI PROGRAM</span></div><div class="cinema-ui"><div class="cinema-side"><span>NOW SHOWING</span><strong>Pick your seat.<br>Enjoy the show.</strong><span class="cinema-pill">C + FILE HANDLING</span></div><div class="seat-map"><div class="cinema-screen">SCREEN</div><div class="seats-grid" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="seat-picked"></i><i class="seat-picked"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div><img class="project-cover" data-photo-target="cinema" alt="Movie Ticket Booking System project preview" loading="lazy" decoding="async" hidden></div><div class="project-body"><div class="project-number">PROJECT / 05 <span>CONSOLE APPLICATION</span></div><h3>Movie Ticket Booking System</h3><p>A command-line system for browsing showtimes, choosing seats, and generating tickets, using file handling for persistent storage and input validation.</p><div class="project-footer"><div class="tech-list"><span>C</span><span>File Handling</span><span>CLI</span></div><a class="project-link" href="https://github.com/fahim-fardin-1045/Movie-Ticket-Booking" target="_blank" rel="noopener noreferrer" aria-label="View Movie Ticket Booking System on GitHub"><svg class="icon"><use href="#ic-arrow-up-right"/></svg></a></div></div></article>
+        <article class="project-card reveal work-project" data-tech="web java">
+          <a class="project-art work-art art-citycare" href="work/citycare-hospital.html" aria-label="Read the CityCare Hospital case study">
+            <div class="work-browser">
+              <div class="work-browser-bar" aria-hidden="true">
+                <span class="work-browser-dots"><i></i><i></i><i></i></span>
+                <span class="work-browser-name">CityCare / Patient Portal</span>
+                <span class="work-browser-arrow">↗</span>
+              </div>
+              <div class="work-browser-screen">
+                <img class="project-cover" src="assets/img/work/citycare-hospital-1.webp" data-photo-target="citycare" alt="Project interface preview for CityCare Hospital" loading="lazy" decoding="async">
+              </div>
+            </div>
+            <span class="work-art-label">REAL UI · DEMO DATA</span>
+          </a>
+          <div class="project-body">
+            <div class="project-number">PROJECT / 02 <span>HEALTHCARE MANAGEMENT PROTOTYPE</span></div>
+            <h3>CityCare Hospital</h3>
+            <p class="work-project-summary">A hospital website, patient appointment portal and role-protected administrative system built in Java.</p>
+
+            <div class="work-preview-strip" aria-label="Project screenshots">
+              <a href="work/citycare-hospital.html" aria-label="View citycare patient appointment dashboard in the full case study"><img src="assets/img/work/citycare-hospital-2.webp" alt="CityCare patient appointment dashboard" loading="lazy" decoding="async"></a>
+              <a href="work/citycare-hospital.html" aria-label="View citycare hospital administrator dashboard in the full case study"><img src="assets/img/work/citycare-hospital-3.webp" alt="CityCare hospital administrator dashboard" loading="lazy" decoding="async"></a>
+            </div>
+            <div class="project-footer work-card-footer"><div class="tech-list"><span>Java 21</span><span>Spring Boot</span><span>Thymeleaf</span></div><a class="project-link" href="https://github.com/fahim-fardin-1045/city-care-hospital-management-system" target="_blank" rel="noopener noreferrer" title="View source on GitHub" aria-label="View CityCare Hospital source code on GitHub"><svg class="icon"><use href="#ic-github"/></svg></a></div>
+            <a href="work/citycare-hospital.html" class="work-case-link">Read the full case study <svg class="icon"><use href="#ic-arrow-up-right"/></svg></a>
+          </div>
+        </article>
+        <article class="project-card reveal work-project" data-tech="web python">
+          <a class="project-art work-art art-royal" href="work/royal-spice.html" aria-label="Read the The Royal Spice case study">
+            <div class="work-browser">
+              <div class="work-browser-bar" aria-hidden="true">
+                <span class="work-browser-dots"><i></i><i></i><i></i></span>
+                <span class="work-browser-name">Royal Spice / Restaurant</span>
+                <span class="work-browser-arrow">↗</span>
+              </div>
+              <div class="work-browser-screen">
+                <img class="project-cover" src="assets/img/work/royal-spice-1.webp" data-photo-target="royal" alt="Project interface preview for The Royal Spice" loading="lazy" decoding="async">
+              </div>
+            </div>
+            <span class="work-art-label">REAL UI · DEMO DATA</span>
+          </a>
+          <div class="project-body">
+            <div class="project-number">PROJECT / 03 <span>RESTAURANT &AMP; POS PLATFORM</span></div>
+            <h3>The Royal Spice</h3>
+            <p class="work-project-summary">A connected restaurant ordering and operations prototype, from browsing the menu to processing orders at the counter.</p>
+
+            <div class="work-preview-strip" aria-label="Project screenshots">
+              <a href="work/royal-spice.html" aria-label="View royal spice shopping bag and promotion screen in the full case study"><img src="assets/img/work/royal-spice-2.webp" alt="Royal Spice shopping bag and promotion screen" loading="lazy" decoding="async"></a>
+              <a href="work/royal-spice.html" aria-label="View royal spice point-of-sale screen in the full case study"><img src="assets/img/work/royal-spice-3.webp" alt="Royal Spice point-of-sale screen" loading="lazy" decoding="async"></a>
+            </div>
+            <div class="project-footer work-card-footer"><div class="tech-list"><span>Python</span><span>Flask</span><span>MySQL</span></div><a class="project-link" href="https://github.com/fahim-fardin-1045/The-Royel-Spice" target="_blank" rel="noopener noreferrer" title="View source on GitHub" aria-label="View The Royal Spice source code on GitHub"><svg class="icon"><use href="#ic-github"/></svg></a></div>
+            <a href="work/royal-spice.html" class="work-case-link">Read the full case study <svg class="icon"><use href="#ic-arrow-up-right"/></svg></a>
+          </div>
+        </article>
+        <article class="project-card reveal work-project" data-tech="web php">
+          <a class="project-art work-art art-hotel" href="work/hotel-booking.html" aria-label="Read the Hotel Booking System case study">
+            <div class="work-browser">
+              <div class="work-browser-bar" aria-hidden="true">
+                <span class="work-browser-dots"><i></i><i></i><i></i></span>
+                <span class="work-browser-name">Hotel Booking / Rooms</span>
+                <span class="work-browser-arrow">↗</span>
+              </div>
+              <div class="work-browser-screen">
+                <img class="project-cover" src="assets/img/work/hotel-booking-1.webp" data-photo-target="hotel" alt="Project interface preview for Hotel Booking System" loading="lazy" decoding="async">
+              </div>
+            </div>
+            <span class="work-art-label">REAL UI · DEMO DATA</span>
+          </a>
+          <div class="project-body">
+            <div class="project-number">PROJECT / 04 <span>BOOKING &AMP; RESERVATION WORKFLOW</span></div>
+            <h3>Hotel Booking System</h3>
+            <p class="work-project-summary">A room-booking prototype covering property discovery, date-based requests, a simulated payment and booking administration.</p>
+
+            <div class="work-preview-strip" aria-label="Project screenshots">
+              <a href="work/hotel-booking.html" aria-label="View hotel booking property listing screen in the full case study"><img src="assets/img/work/hotel-booking-2.webp" alt="Hotel Booking property listing screen" loading="lazy" decoding="async"></a>
+              <a href="work/hotel-booking.html" aria-label="View hotel booking apartment room choices in the full case study"><img src="assets/img/work/hotel-booking-3.webp" alt="Hotel Booking apartment room choices" loading="lazy" decoding="async"></a>
+            </div>
+            <div class="project-footer work-card-footer"><div class="tech-list"><span>PHP</span><span>MySQL</span><span>PDO</span></div><a class="project-link" href="https://github.com/fahim-fardin-1045/hotel_booking" target="_blank" rel="noopener noreferrer" title="View source on GitHub" aria-label="View Hotel Booking System source code on GitHub"><svg class="icon"><use href="#ic-github"/></svg></a></div>
+            <a href="work/hotel-booking.html" class="work-case-link">Read the full case study <svg class="icon"><use href="#ic-arrow-up-right"/></svg></a>
+          </div>
+        </article>
+        <article class="project-card reveal work-project" data-tech="web php">
+          <a class="project-art work-art art-zenblog" href="work/zenblog.html" aria-label="Read the ZenBlog case study">
+            <div class="work-browser">
+              <div class="work-browser-bar" aria-hidden="true">
+                <span class="work-browser-dots"><i></i><i></i><i></i></span>
+                <span class="work-browser-name">ZenBlog / Publishing</span>
+                <span class="work-browser-arrow">↗</span>
+              </div>
+              <div class="work-browser-screen">
+                <img class="project-cover" src="assets/img/work/zenblog-1.webp" data-photo-target="zenblog" alt="Project interface preview for ZenBlog" loading="lazy" decoding="async">
+              </div>
+            </div>
+            <span class="work-art-label">REAL UI · DEMO DATA</span>
+          </a>
+          <div class="project-body">
+            <div class="project-number">PROJECT / 05 <span>BLOG &AMP; CONTENT MANAGEMENT</span></div>
+            <h3>ZenBlog</h3>
+            <p class="work-project-summary">A PHP publishing platform that connects writing, categories, reader comments and a moderation-focused admin panel.</p>
+
+            <div class="work-preview-strip" aria-label="Project screenshots">
+              <a href="work/zenblog.html" aria-label="View zenblog reader comments moderation screen in the full case study"><img src="assets/img/work/zenblog-2.webp" alt="ZenBlog reader comments moderation screen" loading="lazy" decoding="async"></a>
+              <a href="work/zenblog.html" aria-label="View zenblog create post screen in the full case study"><img src="assets/img/work/zenblog-3.webp" alt="ZenBlog create post screen" loading="lazy" decoding="async"></a>
+            </div>
+            <div class="project-footer work-card-footer"><div class="tech-list"><span>PHP</span><span>MySQL</span><span>PDO</span></div><a class="project-link" href="https://github.com/fahim-fardin-1045/php_zen-blog" target="_blank" rel="noopener noreferrer" title="View source on GitHub" aria-label="View ZenBlog source code on GitHub"><svg class="icon"><use href="#ic-github"/></svg></a></div>
+            <a href="work/zenblog.html" class="work-case-link">Read the full case study <svg class="icon"><use href="#ic-arrow-up-right"/></svg></a>
+          </div>
+        </article>
       </div>
       <p class="filter-status sr-only" id="filterStatus" role="status" aria-live="polite">Showing all 5 projects.</p>
+      <p class="work-project-note">Case studies describe locally implemented prototypes and learning outcomes. Sample screenshots are not claims of real users, live payments or production deployment.</p>
       <div class="projects-more reveal">Interested in the code? <a href="https://github.com/fahim-fardin-1045" target="_blank" rel="noopener noreferrer">Explore my GitHub <svg class="icon"><use href="#ic-arrow-up-right"/></svg></a></div>
     </section>
 

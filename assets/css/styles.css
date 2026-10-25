@@ -288,3 +288,108 @@ body.light .scroll-progress { background: linear-gradient(90deg, #167c70, #5e71c
 .citycare-preview-caption { position: absolute; bottom: 14px; left: 16px; z-index: 4; font: 700 9px var(--heading); letter-spacing: 1.15px; padding: 7px 11px; border-radius: 6px; background: #092535de; color: #eafdf8; border: 1px solid #ffffff38; }
 .art-citycare.has-upload .citycare-preview, .art-citycare.has-upload .citycare-preview-caption { display: none; }
 @media (max-width: 510px) { .citycare-preview-caption { bottom: 12px; left: 12px; font-size: 8px; } }
+
+/* Work case studies — integrated with the existing portfolio visual language. */
+.work-introduction{display:grid;grid-template-columns:minmax(130px,.55fr) 1.45fr;align-items:center;gap:24px;padding:24px 28px;margin:22px 0 28px;border:1px solid #345365;border-radius:12px;background:linear-gradient(120deg,rgba(110,225,191,.10),rgba(19,36,54,.38))}
+.work-intro-mark{font:700 11px/1.6 var(--heading);color:var(--mint);letter-spacing:1.35px;max-width:170px}
+.work-introduction p{margin:0;line-height:1.85;color:var(--text-muted);font-size:14px}
+.work-art{display:block;text-decoration:none;background:var(--surface);padding:0;position:relative;isolation:isolate;overflow:hidden}
+.work-art .project-cover{z-index:2;object-fit:cover;object-position:center top;transition:transform .45s ease}
+.work-art:hover .project-cover,.work-project:hover .project-cover{transform:scale(1.035)}
+.work-art::after{content:'';position:absolute;inset:40% 0 0;background:linear-gradient(transparent,rgba(3,14,21,.64));z-index:3;pointer-events:none}
+.work-art-label{position:absolute;bottom:16px;left:17px;right:14px;z-index:4;display:inline-block;width:max-content;max-width:calc(100% - 34px);border:1px solid rgba(255,255,255,.28);border-radius:6px;background:rgba(6,25,32,.75);padding:7px 9px;color:#ecfff8;letter-spacing:1.1px;font:700 9px var(--heading)}
+.work-project .project-body{display:flex;flex-direction:column;min-height:430px}
+.work-project .project-body .work-project-summary{min-height:0;margin-bottom:15px}
+.work-mini-story{display:grid;gap:0;border-top:1px solid #34495c;margin-top:3px}
+.work-mini-story>div{display:grid;grid-template-columns:116px 1fr;gap:11px;border-bottom:1px solid #34495c;padding:12px 0;align-items:baseline}
+.work-mini-story span{font:700 9px var(--heading);letter-spacing:.95px;color:var(--mint)}
+.work-mini-story p{min-height:0;margin:0;font-size:12px;line-height:1.62;color:var(--text-muted)}
+.work-card-footer{margin-top:auto;padding-top:21px}
+.work-card-footer .tech-list{display:flex;flex-wrap:wrap;gap:6px}
+.work-case-link{display:flex;justify-content:center;align-items:center;gap:9px;width:100%;text-decoration:none;font:700 12px var(--heading);letter-spacing:.15px;margin-top:15px;padding:13px 12px;border:1px solid #4b796e;border-radius:8px;color:var(--mint);background:rgba(121,225,195,.07);transition:background .2s,color .2s}
+.work-case-link:hover{background:var(--mint);color:#112329}
+.work-case-link .icon{width:15px;height:15px}
+.work-project-note{margin:22px 0 0;color:var(--text-muted);font-size:12px;line-height:1.8}
+@media(max-width:750px){.work-introduction{grid-template-columns:1fr;gap:9px;padding:21px}.work-intro-mark{max-width:none}.work-mini-story>div{grid-template-columns:1fr;gap:5px}.work-project .project-body{min-height:0}}
+@media(max-width:430px){.work-art-label{font-size:8px}.work-project .project-body{padding:23px 21px}}
+
+/* Selected Work: imagery-led cards; complete project narratives remain on /work/ pages. */
+.work-project .project-art{height:285px}
+.work-project .project-body{min-height:0}
+.work-project .project-body .work-project-summary{margin-bottom:16px}
+.work-preview-strip{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:0 0 6px}
+.work-preview-strip a{display:block;overflow:hidden;border-radius:7px;border:1px solid #405365;background:#142837;aspect-ratio:1.72;transition:border-color .2s}
+.work-preview-strip a:hover,.work-preview-strip a:focus-visible{border-color:var(--mint)}
+.work-preview-strip img{display:block;width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform .25s ease}
+.work-preview-strip a:hover img{transform:scale(1.045)}
+.light .work-preview-strip a{border-color:#c8d8dc;background:#e7eeef}
+@media(max-width:750px){.work-project .project-art{height:285px}}
+@media(max-width:510px){.work-project .project-art{height:235px}.work-preview-strip{gap:7px}}
+@media(prefers-reduced-motion:reduce){.work-preview-strip a,.work-preview-strip img{transition:none}}
+
+
+/* v1.6 — Selected Work: full-width real project previews and browser framing.
+   Scoped to the five Work cards; case studies and other sections are unchanged. */
+.work-project .project-art {
+  --preview-glow:rgba(88,189,152,.17);
+  position:relative;display:block;height:306px;padding:22px 24px 27px;
+  background:radial-gradient(ellipse at 86% 4%,var(--preview-glow),transparent 68%),
+             linear-gradient(135deg,#0d1e2c,#19344a);
+  overflow:hidden;
+}
+.work-project .art-citycare{--preview-glow:rgba(61,169,185,.20)}
+.work-project .art-royal{--preview-glow:rgba(212,169,85,.17)}
+.work-project .art-hotel{--preview-glow:rgba(141,167,215,.17)}
+.work-project .art-zenblog{--preview-glow:rgba(172,158,203,.17)}
+.work-project .project-art::before{content:"";position:absolute;inset:0;z-index:0;
+  background:linear-gradient(110deg,rgba(255,255,255,.028),transparent 35%);pointer-events:none}
+.work-project .project-art::after{content:none}
+.work-browser{height:100%;width:100%;position:relative;z-index:1;display:flex;flex-direction:column;
+  border:1px solid rgba(175,211,220,.32);border-radius:11px;overflow:hidden;
+  box-shadow:0 22px 40px rgba(0,8,14,.46),0 1px 0 rgba(255,255,255,.08);
+  background:#eef3f2;transition:transform .3s ease,box-shadow .3s ease}
+.work-browser-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;
+  flex:0 0 31px;min-height:31px;padding:0 12px;background:#152c39;
+  border-bottom:1px solid rgba(255,255,255,.09)}
+.work-browser-dots{display:flex;align-items:center;gap:5px}
+.work-browser-dots i{display:block;width:7px;height:7px;border-radius:50%;background:#d38f82}
+.work-browser-dots i:nth-child(2){background:#dbc17a}
+.work-browser-dots i:nth-child(3){background:#80c2aa}
+.work-browser-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+  color:#a9c6cd;font:600 10px/1.2 var(--heading);letter-spacing:.2px}
+.work-browser-arrow{color:#9ce5d0;font:700 15px/1 var(--heading)}
+.work-browser-screen{position:relative;flex:1 1 auto;min-height:0;overflow:hidden;background:#eef3f1}
+.work-art .work-browser-screen .project-cover{display:block;position:absolute;inset:0;z-index:1;
+  width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform .35s ease}
+.work-project:hover .work-browser,.work-project .work-art:focus-visible .work-browser{
+  transform:translateY(-3px);box-shadow:0 28px 47px rgba(0,8,14,.53)}
+.work-project:hover .work-browser .project-cover,.work-project .work-art:focus-visible .project-cover{
+  transform:scale(1.025)}
+.work-project .work-art-label{z-index:3;bottom:8px;left:auto;right:11px;
+  width:auto;max-width:calc(100% - 22px);padding:6px 9px;
+  border:1px solid rgba(255,255,255,.3);border-radius:6px;
+  background:rgba(9,29,37,.82);backdrop-filter:blur(8px);
+  font:700 8px/1.2 var(--heading);letter-spacing:1.05px;color:#f1fff8}
+.work-project .project-body{padding:25px 26px 27px}
+.work-project .project-body .work-project-summary{margin-bottom:16px;line-height:1.65}
+.work-preview-heading{display:flex;justify-content:space-between;align-items:center;gap:12px;
+  margin:0 0 9px;font:700 9px/1.4 var(--heading);letter-spacing:1.2px;color:var(--mint)}
+.work-preview-heading span:last-child{color:#819aad;letter-spacing:.7px}
+.work-project .work-preview-strip{gap:10px;margin-bottom:2px}
+.work-project .work-preview-strip a{border-radius:9px;border:1px solid #3e5a68;
+  box-shadow:0 4px 14px rgba(2,12,25,.12);aspect-ratio:1.82}
+.work-project .work-preview-strip a:focus-visible{outline:2px solid var(--mint);outline-offset:2px}
+.work-project .work-preview-strip img{object-fit:cover;object-position:center top}
+.work-project .work-case-link{min-height:48px}
+.light .work-project .work-preview-strip a{border-color:#c3d9db}
+.light .work-preview-heading span:last-child{color:#66818c}
+@media(max-width:750px){.work-project .project-art{height:288px;padding:18px 19px 24px}}
+@media(max-width:510px){
+  .work-project .project-art{height:242px;padding:13px 14px 20px}
+  .work-project .project-body{padding:21px}
+  .work-project .work-preview-strip{gap:8px}
+  .work-browser-bar{min-height:27px;flex-basis:27px;padding:0 9px}
+  .work-browser-name{font-size:9px}
+  .work-project .work-art-label{bottom:6px;right:7px;font-size:7px}
+}
+@media(prefers-reduced-motion:reduce){.work-browser,.work-art .work-browser-screen .project-cover{transition:none}}

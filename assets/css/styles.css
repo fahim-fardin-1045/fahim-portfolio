@@ -433,3 +433,49 @@ body.light .scroll-progress { background: linear-gradient(90deg, #167c70, #5e71c
  .work-project .work-preview-strip > a{border-radius:8px}
 }
 @media(prefers-reduced-motion:reduce){.work-project .work-preview-strip a,.work-project .work-preview-strip img{transition:none!important}}
+
+/* FIXED — Home illustration and About Me section boundary.
+   The code sample is HTML, not a <pre>: preserving all indentation as
+   whitespace created dozens of phantom lines and an oversized code card. */
+.hero-content,
+.hero-visual,
+.code-card {
+  min-width: 0;
+}
+
+.code-body {
+  white-space: normal;
+  line-height: 1.95;
+}
+
+/* Each code row must stay together, without preserving source indentation. */
+.code-body > div {
+  white-space: nowrap;
+}
+
+.code-card {
+  max-width: 100%;
+}
+
+/* Keep the headline inside its grid column instead of under the illustration. */
+@media (min-width: 751px) {
+  .hero-content { container-type: inline-size; }
+  .hero h1 {
+    font-size: clamp(43px, 5vw, 80px);
+    letter-spacing: -0.055em;
+  }
+  @supports (font-size: 1cqw) {
+    .hero h1 { font-size: clamp(43px, 13cqw, 80px); }
+  }
+}
+
+/* Small phones require natural word wrapping instead of clipped text. */
+@media (max-width: 510px) {
+  .hero h1 {
+    white-space: normal;
+    overflow-wrap: normal;
+  }
+  .hero-visual { width: 100%; }
+  .code-card { width: min(100%, 310px); }
+  .code-body { line-height: 1.85; }
+}

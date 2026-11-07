@@ -1,222 +1,334 @@
 
-%-------------------------
-% Resume in LaTeX - Fahim Fardin
-%-------------------------
+\documentclass[a4paper,10pt]{article}
 
-\documentclass[letterpaper,11pt]{article}
-
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
+% ==================== PACKAGES ====================
+\usepackage[margin=0.50in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \usepackage{enumitem}
 \usepackage{xcolor}
-\usepackage[pdftex]{hyperref}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
 \usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{needspace}
 
+% ==================== PAGE STYLE ====================
 \renewcommand{\familydefault}{\sfdefault}
-
-\hypersetup{
-    colorlinks=true,
-    urlcolor=blue,
-    linkcolor=black
-}
-
 \pagestyle{fancy}
 \fancyhf{}
-\fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-\addtolength{\oddsidemargin}{-0.45in}
-\addtolength{\evensidemargin}{-0.45in}
-\addtolength{\textwidth}{1.1in}
-\addtolength{\topmargin}{-.6in}
-\addtolength{\textheight}{1.2in}
+\fancyfoot[R]{\fontsize{8}{9}\selectfont
+Fahim Fardin | Page \thepage}
 
-\urlstyle{same}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+\setlength{\emergencystretch}{2em}
 \raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
 
-\titleformat{\section}{
-  \vspace{4pt}\bfseries\large
-}{}{0em}{}[\titlerule \vspace{-6pt}]
+% Comfortable body font
+\AtBeginDocument{\fontsize{9.5}{11.3}\selectfont}
 
-\newcommand{\certlink}[2]{\href{#2}{#1}}
+% Readable lists
+\setlist[itemize]{
+    leftmargin=15pt,
+    itemsep=1.5pt,
+    topsep=2pt,
+    parsep=0pt,
+    partopsep=0pt
+}
 
-%-------------------------------------------
+% Section headings
+\titleformat{\section}
+{\fontsize{10.5}{12}\selectfont
+\bfseries\color{blue!35!black}}
+{}{0em}{}[\titlerule]
+
+\titlespacing*{\section}{0pt}{6pt}{3pt}
+
+% Keep project headings with sufficient following space
+\newcommand{\projecttitle}[2]{%
+    \Needspace{9\baselineskip}%
+    \vspace{3pt}%
+    \textbf{\href{#2}{#1}}%
+    \hfill
+    \faGithub\ \href{#2}{GitHub}%
+    \par
+}
+
+\newcommand{\techstack}[1]{%
+    {\fontsize{8.5}{10}\selectfont\itshape #1\par}
+}
+
 \begin{document}
 
-%---------- HEADER -----------------
+% ==================== HEADER ====================
+
 \begin{center}
-{\Huge \textbf{Fahim Fardin}} \\[10pt]
 
-95/3/2 Mirpur, Dhaka, Bangladesh
-\,\,|\,\,
-Phone: 01726490209
-\,\,|\,\,
-Email: \href{mailto:fahimfardin1045@gmail.com}{fahimfardin1045@gmail.com} \\[6pt]
+{\fontsize{19}{22}\selectfont
+\textbf{Fahim Fardin}}\\[4pt]
 
-LinkedIn: \href{https://www.linkedin.com/in/fahim-fardin-28616822a}{fahim-fardin-28616822a}
-\,\,|\,\,
-GitHub: \href{https://github.com/fahim-fardin-1045}{fahim-fardin-1045}
-\,\,|\,\,
-Portfolio: \href{https://sites.google.com/diu.edu.bd/fahimfardin1045/education}{Fahim Fardin Portfolio}
+{\fontsize{9.5}{11}\selectfont
+\textbf{Software Developer | Python | Full-Stack Development |
+Data \& Machine Learning}}\\[6pt]
+
+{\fontsize{9}{10.5}\selectfont
+Dhaka, Bangladesh
+\quad | \quad
+\faPhone\ +880 1726-490209
+\quad | \quad
+\faEnvelope\
+\href{mailto:fahimfardin1045@gmail.com}
+{fahimfardin1045@gmail.com}
+}\\[4pt]
+
+{\fontsize{9}{10.5}\selectfont
+\faLinkedin\
+\href{https://www.linkedin.com/in/fahim-fardin-28616822a}
+{LinkedIn}
+\quad | \quad
+\faGithub\
+\href{https://github.com/fahim-fardin-1045}
+{GitHub}
+\quad | \quad
+\faGlobe\
+\href{https://fahim-fardin-1045.github.io/fahim-portfolio/}
+{Portfolio}
+}
+
 \end{center}
 
-%----------- SUMMARY -----------------
-\section{Professional Summary}
-\small
-Entry-level Python developer with a strong foundation in software engineering, data analysis, and machine learning. Proficient in Python, Java, SQL, and ML model development, with hands-on experience building full-stack applications and automating data workflows. Fast learner with strong analytical thinking and a commitment to writing clean, maintainable code. Seeking to contribute to impactful engineering projects while growing technical expertise.
+\vspace{-2pt}
 
-%----------- EDUCATION -----------------
-\section{Education}
-\begin{itemize}[leftmargin=*]
+% ==================== SUMMARY ====================
 
-\item
-\textbf{Daffodil International University} \hfill Jan 2022 -- Dec 2025 \\
-B.Sc. in Software Engineering \,\,|\,\, CGPA: 3.78
+\section*{Professional Summary}
 
-\item
-\textbf{BCIC College, Mirpur-1, Dhaka} \hfill 2020 \\
-HSC in Science \,\,|\,\, GPA: 5.00
+Software Engineering graduate with hands-on experience building
+full-stack web applications using Python, Django, Flask, Java,
+Spring Boot, PHP, and SQL. Developed projects in e-commerce,
+inventory management, restaurant POS, hospital appointments,
+hotel booking, and content management. Currently supports
+AI and machine-learning workflows through image research and
+data annotation at ARC Annotation. Skilled in relational database
+design, CRUD operations, authentication, form validation,
+responsive interfaces, and data quality.
 
-\item
-\textbf{Monipur High School \& College, Mirpur-2, Dhaka} \hfill 2018 \\
-SSC in Science \,\,|\,\, GPA: 4.89
+% ==================== SKILLS ====================
+
+\section*{Technical Skills}
+
+\textbf{Programming:}
+Python, Java, PHP, C, SQL, HTML5, CSS3, JavaScript
+
+\textbf{Frameworks and Libraries:}
+Django, Flask, Spring Boot, Spring MVC, Spring Security,
+Spring Data JPA/Hibernate, Flask-SQLAlchemy, Thymeleaf,
+Jinja2, Bootstrap
+
+\textbf{Databases and Data Analysis:}
+MySQL, SQLite, PDO, PyMySQL, Pandas, NumPy, scikit-learn,
+Matplotlib, Seaborn, TensorFlow, Jupyter Notebook, Statistics
+
+\textbf{Tools and Practices:}
+Git/GitHub, Maven, VS Code, MS Excel, CRUD operations,
+relational data modelling, authentication and authorization,
+form validation, responsive UI development, automated testing,
+data annotation, quality assurance
+
+% ==================== EDUCATION ====================
+
+\section*{Education}
+
+\textbf{Professional Master's in Information Technology (PMIT)}
+-- Jahangirnagar University
+\hfill 2026 -- Present\\
+CGPA: Ongoing
+
+\textbf{B.Sc. in Software Engineering}
+-- Daffodil International University
+\hfill Jan 2022 -- Dec 2026\\
+CGPA: 3.78
+
+\textbf{Higher Secondary Certificate (Science)}
+-- BCIC College, Mirpur-1, Dhaka
+\hfill 2020\\
+GPA: 5.00
+
+\textbf{Secondary School Certificate (Science)}
+-- Monipur High School \& College, Mirpur-2, Dhaka
+\hfill 2018\\
+GPA: 4.89
+
+% ==================== EXPERIENCE ====================
+
+\section*{Professional Experience}
+
+\textbf{Data Labeler -- ARC Annotation}
+\hfill Jan 2026 -- Present\\
+{\fontsize{9}{10.5}\selectfont
+\textit{Remote | Toronto, Ontario}}
+
+\begin{itemize}
+    \item Conduct image research and annotate visual data for AI
+    and machine-learning projects according to task-specific guidelines.
+
+    \item Maintain annotation accuracy, consistency, and quality
+    through careful review and attention to detail.
+\end{itemize}
+
+% ==================== PROJECTS ====================
+
+\section*{Projects}
+
+% Project 1
+\projecttitle
+{FreshBasket Fruits}
+{https://github.com/fahim-fardin-1045/freshbasket}
+
+\techstack{Python, Django 5.2, MySQL, JavaScript}
+
+\begin{itemize}
+    \item Developed an e-commerce and inventory application featuring
+    product search, filtering, cart, voucher validation, checkout,
+    guest order tracking, staff dashboards, purchasing, stock control,
+    and spoilage management.
+
+    \item Implemented transactional order creation, stock validation,
+    inventory allocation, role-based permissions, payment records,
+    and automated tests for account, voucher, and operational workflows.
+\end{itemize}
+
+% Project 2
+\projecttitle
+{CityCare Hospital Management System}
+{https://github.com/fahim-fardin-1045/city-care-hospital-management-system}
+
+\techstack{Java 21, Spring Boot, Spring Security, Spring Data JPA,
+Hibernate, Thymeleaf, MySQL, Bootstrap, Maven}
+
+\begin{itemize}
+    \item Built a hospital-management prototype with doctor and
+    department directories, patient registration, appointments,
+    appointment history, and an administrative dashboard.
+
+    \item Integrated Spring Security, form validation, JPA-based
+    database operations, appointment-status management, and
+    administration of wards, rooms, and bed capacity.
+\end{itemize}
+
+% Project 3
+\projecttitle
+{The Royal Spice -- Restaurant Ordering and POS System}
+{https://github.com/fahim-fardin-1045/The-Royel-Spice}
+
+\techstack{Python, Flask, Flask-SQLAlchemy, MySQL, Jinja2,
+Flask-Login, Flask-WTF, HTML, CSS, JavaScript}
+
+\begin{itemize}
+    \item Developed a restaurant ordering application with searchable
+    menus, discounts, cart, checkout, receipts, reservation requests,
+    staff administration, and point-of-sale (POS) functionality.
+
+    \item Connected orders, customers, reservations, inventory,
+    and sales and expense reports. Implemented authenticated forms,
+    server-side price and discount validation, and capacity checks.
+\end{itemize}
+
+% Project 4
+\projecttitle
+{Hotel Booking System}
+{https://github.com/fahim-fardin-1045/hotel_booking}
+
+\techstack{PHP, MySQL, PDO, Bootstrap, JavaScript, SCSS}
+
+\begin{itemize}
+    \item Built a hotel-booking prototype with room browsing,
+    room details, date selection, booking records, confirmations,
+    and administration of rooms, amenities, and booking status.
+
+    \item Used PDO and session-based workflows to manage database
+    records and booking states. Payment is simulated rather than
+    processed through a real payment gateway.
+\end{itemize}
+
+% Project 5
+\projecttitle
+{ZenBlog -- Content Management System}
+{https://github.com/fahim-fardin-1045/php_zen-blog}
+
+\techstack{PHP, MySQL, PDO, Bootstrap, JavaScript, CSS}
+
+\begin{itemize}
+    \item Developed a PHP/MySQL publishing platform with post
+    creation and editing, categories, search, image uploads,
+    author accounts, and an administrative dashboard.
+
+    \item Implemented author-ownership checks, session management,
+    comment moderation, and post publishing and unpublishing controls.
+\end{itemize}
+
+% ==================== CERTIFICATIONS ====================
+
+\section*{Certifications}
+
+\begin{itemize}
+
+    \item
+    \href{https://www.credly.com/go/redrq256}
+    {AWS Academy Graduate -- Machine Learning for NLP}
+
+    \item
+    \href{https://www.credly.com/go/l5bCc9kc}
+    {AWS Academy Graduate -- Machine Learning Foundations}
+
+    \item
+    \href{https://coursera.org/verify/PRRMQLF92VWO}
+    {Neural Networks and Deep Learning -- DeepLearning.AI}
+
+    \item
+    \href{https://coursera.org/verify/VD1JTFF6AWCI}
+    {Improving Deep Neural Networks -- Optimization and Tuning}
+
+    \item
+    \href{https://udemy.com/certificate/UC-cd60633a-88c6-4aba-a10d-b816e0342bf5}
+    {Python for Everyone -- Udemy}
+
+    \item
+    \href{https://udemy.com/certificate/UC-50faf0ad-2db0-4e7d-b21d-664479cb1e00}
+    {Learn Java Programming -- Udemy}
+
+    \item
+    \href{https://udemy.com/certificate/UC-bc8eb25b-78a3-4b87-99aa-cfc5cb70a768}
+    {MS Excel Automation: Excel Data Analysis with Python -- Udemy}
+
+    \item
+    \href{https://udemy.com/certificate/UC-fce22cf6-3944-42fe-a9ba-00f5184d818b}
+    {Data Analytics for Project Management -- Udemy}
+
+    \item
+    \href{https://coursera.org/verify/U7A5CRUI7LOB}
+    {Foundations of User Experience (UX) Design -- Google}
+
+    \item
+    \href{https://coursera.org/verify/YOY3MT6ZIQ01}
+    {Start the UX Design Process -- Google}
+
+    \item Professional UI/UX Design with Figma -- UY LAB
+
+    \item
+    \href{https://udemy.com/certificate/UC-d26cc973-0299-447c-a773-b4584e918aaf}
+    {Microsoft Word Essential Training -- Udemy}
 
 \end{itemize}
 
-%----------- TECHNICAL SKILLS -----------------
-\section{Technical Skills}
-\begin{itemize}[leftmargin=*]
+% ==================== ADDITIONAL INFORMATION ====================
 
-\item \textbf{Proficient:} MS Excel, Data Entry, Data Annotation, Documentation, Python, SQL, Machine Learning, Data Analysis, Data Visualization, Git/GitHub, Jupyter Notebook
+\section*{Additional Information}
 
-\item \textbf{Intermediate:} Java, Bootstrap, Scikit-learn, NumPy, Pandas, Matplotlib, Seaborn, VS Code
-
-\item \textbf{Familiar:} HTML5, CSS, JavaScript, PHP, Django, Flask, Flask-SQLAlchemy, Flask-Login, Flask-WTF, Jinja2, PyMySQL, Spring Boot, Spring MVC, Spring Security, Thymeleaf, Spring Data JPA/Hibernate, MySQL, Maven, TensorFlow
-
-\item \textbf{Also:} Statistics
-
-\item \textbf{Core Competencies:} Record Keeping, Quality Assurance, Field Coordination, Communication Skills
-
-\end{itemize}
-
-%----------- EXPERIENCE -----------------
-\section{Professional Experience}
-\begin{itemize}[leftmargin=*]
-
-\item
-\textbf{Data Labeler} \hfill Jan 2026 -- Present \\
-\textit{ARC Annotation \,\,|\,\, Toronto, Ontario (Remote)} \\
-Deliver precise, high-quality data annotation services for AI and machine learning projects, with a focus on \textbf{Image Research}. Maintain accuracy, reliability, and attention to detail across large-scale labeling workflows.
-
-\end{itemize}
-
-%----------- PROJECTS -----------------
-\section{Projects}
-\begin{itemize}[leftmargin=*]
-
-% CityCare Hospital Management System
-\item
-\textbf{CityCare Hospital Management System}
-\hfill \href{https://github.com/fahim-fardin-1045/city-care-hospital-management-system}{GitHub} \\
-\textit{Java 21, Spring Boot, Thymeleaf, Spring Security, Spring Data JPA/Hibernate, MySQL, HTML/CSS/JavaScript, Bootstrap, Maven} \\
-Developed a full-stack hospital management prototype with a responsive public website, doctor and department directories, patient registration/login, appointment booking, and appointment-history tracking. Built a Spring Security-protected admin dashboard to manage doctors, departments, appointment statuses, wards, rooms, and bed capacity. Added doctor/department image uploads with browser-based cropping and MySQL persistence; patient passwords are BCrypt-hashed.
-
-% The Royal Spice
-\item
-\textbf{The Royal Spice -- Restaurant Ordering \& Management System}
-\hfill \href{https://github.com/fahim-fardin-1045/The-Royel-Spice}{GitHub} \\
-\textit{Python, Flask, Flask-SQLAlchemy, MySQL, Jinja2, Flask-Login, Flask-WTF, HTML/CSS/JavaScript, PyMySQL} \\
-Developed a responsive restaurant ordering and management MVP with searchable menus, cart, checkout, receipts, reservation requests, and discount codes. Built an admin dashboard and POS for order/payment status, menu and table management, customer records, inventory, and sales/expense reporting. Implemented server-side price/discount validation and reservation-capacity checks.
-
-% Django E-commerce
-\item
-\textbf{Online Super Shop (E-commerce Platform)}
-\hfill \href{https://github.com/fahim-fardin-1045/Supershop_project}{GitHub} \\
-\textit{Django, Python, Bootstrap, SQLite} \\
-Built a full-stack e-commerce system with product browsing, cart, checkout, order tracking, and admin inventory control. Implemented secure authentication and optimized database queries for faster page performance. Designed a responsive user interface with Bootstrap.
-
-% PHP Blogging System
-\item
-\textbf{ZenBlog (Content Management System)}
-\hfill \href{https://github.com/fahim-fardin-1045/php_zen-blog}{GitHub} \\
-\textit{PHP, JavaScript, CSS, MySQL} \\
-Developed a dynamic blogging platform with post management, categories, and user authentication. Implemented CRUD operations and an admin dashboard with secure database interactions.
-
-% PHP Hotel Management System
-\item
-\textbf{Hotel Management System}
-\hfill \href{https://github.com/fahim-fardin-1045/hotel_booking}{GitHub} \\
-\textit{PHP, JavaScript, CSS, SCSS, MySQL} \\
-Built a full-stack hotel management system enabling room booking, availability tracking, and customer management. Implemented user authentication, booking workflows, and admin controls; designed a responsive UI using modular SCSS.
-
-% C Ticket Booking
-\item
-\textbf{Movie Ticket Booking System}
-\hfill \href{https://github.com/fahim-fardin-1045/Movie-Ticket-Booking}{GitHub} \\
-\textit{C, File Handling} \\
-Created a CLI-based booking system featuring movie listings, showtimes, seat selection, and ticket generation. Used file handling for persistent storage and implemented input validation for error-free usage.
-
-\end{itemize}
-
-%----------- CERTIFICATIONS -----------------
-\section{Certifications}
-\begin{itemize}[leftmargin=*]
-
-\item \certlink{AWS Academy Graduate -- Machine Learning for NLP}{https://www.credly.com/go/redrq256}
-
-\item \certlink{AWS Academy Graduate -- Machine Learning Foundations}{https://www.credly.com/go/l5bCc9kc}
-
-\item \certlink{Neural Networks and Deep Learning -- DeepLearning.AI}{https://coursera.org/verify/PRRMQLF92VWO}
-
-\item \certlink{Improving Deep Neural Networks -- Optimization \& Tuning}{https://coursera.org/verify/VD1JTFF6AWCI}
-
-\item \certlink{Foundations of User Experience (UX) Design -- Google}{https://coursera.org/verify/U7A5CRUI7LOB}
-
-\item \certlink{Professional UI/UX Design with Figma (Online) -- UY LAB}{https://example.com/certificate-link}
-
-\item \certlink{Start the UX Design Process -- Google}{https://coursera.org/verify/YOY3MT6ZIQ01}
-
-\item \certlink{Learn JAVA Programming -- Udemy}{https://udemy.com/certificate/UC-50faf0ad-2db0-4e7d-b21d-664479cb1e00}
-
-\item \certlink{Python for Everyone -- Udemy}{https://udemy.com/certificate/UC-cd60633a-88c6-4aba-a10d-b816e0342bf5}
-
-\item \certlink{MS Excel Automation: Excel Data Analysis with Python -- Udemy}{https://udemy.com/certificate/UC-bc8eb25b-78a3-4b87-99aa-cfc5cb70a768}
-
-\item \certlink{Microsoft Word Essential Training -- Udemy}{https://udemy.com/certificate/UC-d26cc973-0299-447c-a773-b4584e918aaf}
-
-\item \certlink{Data Analytics for Project Management -- Udemy}{https://udemy.com/certificate/UC-fce22cf6-3944-42fe-a9ba-00f5184d818b}
-
-\end{itemize}
-
-%----------- ADDITIONAL INFORMATION -----------------
-\section{Additional Information}
-\begin{itemize}[leftmargin=*]
-\item \textbf{Languages:} Bengali (Native), English (B2)
-\item \textbf{Interests:} Studying Abroad, Traveling, Sci-Fi Books, Movies
-\end{itemize}
-
-%----------- REFERENCES -----------------
-\section{References}
-\begin{itemize}[leftmargin=*]
-
-\item
-\textbf{Dr. Imran Mahmud} \\
-Head, Department of Software Engineering \\
-Daffodil International University \\
-Email: \href{mailto:imranmahmud@daffodilvarsity.edu.bd}{imranmahmud@daffodilvarsity.edu.bd} \\
-Phone: +8801847140117, +8801711370502
-
-\item
-\textbf{Md. Shohel Arman} \\
-Assistant Professor, Software Engineering \\
-Daffodil International University \\
-Email: \href{mailto:arman.swe@diu.edu.bd}{arman.swe@diu.edu.bd} \\
-Phone: +8801673383289
-
-\end{itemize}
+\textbf{Languages:} Bengali (Native), English (B2)
 
 \end{document}
